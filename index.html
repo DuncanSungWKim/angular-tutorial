@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Angular 2+ Tutorial</title>
+    <script type="text/javascript">
+        var preparedLangs = [
+            "en", "ko"
+        ];
+        var langs = false != navigator.languages
+                        ? navigator.languages
+                        : [ navigator.language || navigator.userLanguage ] ;
+        var lang = null ;
+        for( var i=0 ; i<langs.length ; ++i ) {
+            var myLang = langs[i].substr( 0, 2 );
+            if( preparedLangs.includes(myLang) ) {
+                lang = myLang ;
+                break ;
+            }
+        }
+        if( null == lang )
+            lang = "en" ;
+
+        window.location.href = lang + "/index.html" ;
+    </script>
+</head>
 <body>
     <h1>Angular 2+ Tutorial</h1>
+    <ul>
+        <li><a href='en/index.html'>English</a</li>
+        <li><a href='ko/index.html'>한국어</a</li>
+    </ul>
 </body>
 </html>
