@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+    height="9em"
+    viewBox="0 0 700 1200"
+	preserveAspectRatio="xMinYMin" >
+<g>
+	<polygon
+        fill="white" stroke="black" stroke-width="20" stroke-miterlimit="20"
+		points="13,1004 10,10 684,747 395,749 526,1040 368,1110 222,812"
+	/>
+	<polygon
+		fill="red"
+		points="67,883 64,152 561,692 313,701 459,1006 388,1042 242,730"
+	/>
+</g>
+</svg>

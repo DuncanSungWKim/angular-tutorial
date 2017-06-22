@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Angular 2+ Tutorial</title>
     <script type="text/javascript">
         var preparedLangs = [
             "en", "ko"
         ];
-        var langs = false != navigator.languages
+        var langs = undefined != navigator.languages && navigator.languages.length > 0
                         ? navigator.languages
                         : [ navigator.language || navigator.userLanguage ] ;
         var lang = null ;
         for( var i=0 ; i<langs.length ; ++i ) {
             var myLang = langs[i].substr( 0, 2 );
-            if( preparedLangs.includes(myLang) ) {
+            if( preparedLangs.indexOf(myLang) > -1 ) {
                 lang = myLang ;
                 break ;
             }
@@ -20,6 +21,9 @@
         if( null == lang )
             lang = "en" ;
 
+        if( !!navigator.userAgent.match(/Trident\/7\./) )
+            window.location = lang + "/index.html" ;
+        else
         window.location.href = lang + "/index.html" ;
     </script>
 </head>
